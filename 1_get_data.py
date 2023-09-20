@@ -5,7 +5,7 @@ warnings.simplefilter('ignore')
 
 
 fechaini     = '2015-01-01'
-fechafin     = '2021-07-31' # Be exact in the last day of the month
+fechafin     = '2023-08-31' # Be exact in the last day of the month
 fred_key     = '###############################' # https://fred.stlouisfed.org/docs/api/api_key.html
 
 
@@ -64,13 +64,13 @@ df.index = rango_fechas
 gdp = BCRP.get_data(
     {'PN02538AQ': 'Real GDP'},
     fechaini='1980Q1',
-    fechafin='2023Q1'
+    fechafin='2023Q2'
 )
-
+gdp
 
 # Save at the first days after the closing date of the month
-df.to_pickle('Data/monthly/data_2023_07.pkl')
-gdp.to_pickle('Data/quarterly/gdp_2023_07.pkl')
+df.to_pickle('Data/monthly/data_2023_08.pkl')   # 202308 completed. 202309 preliminar
+gdp.to_pickle('Data/quarterly/gdp_2023_08.pkl')
 
 # df.to_csv('Data/monthly/data_2023_07.csv', encoding='UTF-8')
 # gdp.to_csv('Data/quarterly/gdp_2023_07.csv', encoding='UTF-8')
