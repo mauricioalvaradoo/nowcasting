@@ -4,8 +4,8 @@ from statsmodels.tsa.seasonal import STL
 from sklearn.preprocessing import StandardScaler
 
 
-df    = pd.read_pickle('Data/monthly/data_2023_08.pkl')
-gdp   = pd.read_pickle('Data/quarterly/gdp_2023_08.pkl')
+df    = pd.read_pickle('Data/monthly/data_2023_09.pkl')
+gdp   = pd.read_pickle('Data/quarterly/gdp_2023_09.pkl')
 codes = pd.read_excel('series.xlsx')
 df_c  = pd.DataFrame(index=df.index, columns=df.columns)
 
@@ -70,8 +70,8 @@ gdp['GDP Growth'] = ( gdp['Real GDP']/gdp['Real GDP'].shift(4) - 1 ) * 100
 
 
 # Saving ######################################################################
-df_scaled.to_pickle('Data/monthly/data_st_2023_08.pkl')
-gdp.to_pickle('Data/quarterly/gdp_st_2023_08.pkl')
+df_scaled.to_pickle('Data/monthly/data_st_2023_09.pkl')
+gdp.to_pickle('Data/quarterly/gdp_st_2023_09.pkl')
 
 # df_scaled.to_csv('Data/monthly/data_st_2023_07.csv', encoding='UTF-8')
 # gdp.to_csv('Data/quarterly/gdp_st_2023_07.csv', encoding='UTF-8')
