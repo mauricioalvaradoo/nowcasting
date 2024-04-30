@@ -5,7 +5,7 @@ warnings.simplefilter('ignore')
 
 
 fechaini     = '2015-01-01'
-fechafin     = '2024-03-17' # Be exact in the last day of the month
+fechafin     = '2024-04-29' # Be exact in the last day of the month
 fred_key     = '################################' # https://fred.stlouisfed.org/docs/api/api_key.html
 
 
@@ -69,8 +69,8 @@ gdp = BCRP.get_data(
 gdp
 
 # Save at the first days after the closing date of the month
-df.to_pickle('Data/monthly/data_2024_03.pkl')
-gdp.to_pickle('Data/quarterly/gdp_2024_03.pkl')
+df.to_pickle('Data/monthly/data_2024_04.pkl')
+gdp.to_pickle('Data/quarterly/gdp_2024_04.pkl')
 
 # df.to_csv('Data/monthly/data_2023_07.csv', encoding='UTF-8')
 # gdp.to_csv('Data/quarterly/gdp_2023_07.csv', encoding='UTF-8')
